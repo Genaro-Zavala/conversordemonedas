@@ -6,15 +6,17 @@ public class Principal {
         int opcion = 0;
         do {
             // Mostrar el menú
-            System.out.println("******* MENU *******");
-            System.out.println("[1] - Dolar =>> Peso argentino");
+            System.out.println("****************************************");
+            System.out.println("Sea bienvenido al conversor de monedas:");
+            System.out.println("\n[1] - Dolar =>> Peso argentino");
             System.out.println("[2] - Peso argentino =>> Dolar");
             System.out.println("[3] - Dolar =>>> Real brasilero");
             System.out.println("[4] - Real brasilero =>> Dolar");
             System.out.println("[5] - Dolar =>> Nuevo sol");
             System.out.println("[6] - Nuevo sol =>> Dolar");
             System.out.println("[7] - Salir");
-            System.out.println("Seleccione una opción: ");
+            System.out.println("\nSeleccione una opción valida: ");
+            System.out.println("***************************************");
             opcion = scanner.nextInt();
 
             switch (opcion) {
