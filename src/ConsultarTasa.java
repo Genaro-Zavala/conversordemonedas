@@ -9,8 +9,8 @@ public class ConsultarTasa {
 
     public static double obtenerTasa(String monedaOrigen, String monedaDestino) {
         try {
-            // Crear el cliente HTTP y solicitar la API con la moneda base
-            String apiUrl = "https://v6.exchangerate-api.com/v6/a5925c4c3af1c7aa6de775e4/latest/" + monedaOrigen;
+            // Crea el cliente HTTP y solicita la API con la moneda base
+            String apiUrl = "https://v6.exchangerate-api.com/v6/9a518f55b4d21180347df5fe/latest/" + monedaOrigen;
             HttpClient client = HttpClient.newHttpClient();
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(URI.create(apiUrl))
@@ -24,7 +24,7 @@ public class ConsultarTasa {
             JsonObject jsonObject = gson.fromJson(jsonResponse, JsonObject.class);
             JsonObject rates = jsonObject.getAsJsonObject("conversion_rates");
 
-            // Retornar la tasa de la moneda de destino
+            // Retorna la tasa de la moneda de destino
             return rates.get(monedaDestino).getAsDouble();
 
         } catch (Exception e) {

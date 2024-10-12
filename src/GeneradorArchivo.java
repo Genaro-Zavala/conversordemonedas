@@ -7,7 +7,7 @@ public class GeneradorArchivo {
 
     public static void guardarEnHistorial(String monedaOrigen, String monedaDestino, double cantidad, double resultado) {
         try (FileWriter writer = new FileWriter("historial.txt", true)) {
-            // Formato de fecha y hora actual
+            // Formato de fecha y hora
             DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
             LocalDateTime now = LocalDateTime.now();
 
@@ -16,7 +16,7 @@ public class GeneradorArchivo {
             writer.write(String.format("Conversión: %.2f %s => %.2f %s%n", cantidad, monedaOrigen, resultado, monedaDestino));
             writer.write("------------------------\n");
 
-            System.out.println("Conversión guardada en el historial.");
+
         } catch (IOException e) {
             System.out.println("Error al guardar en el archivo: " + e.getMessage());
         }

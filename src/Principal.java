@@ -6,8 +6,8 @@ public class Principal {
         int opcion = 0;
         do {
             // Mostrar el menú
-            System.out.println("****************************************");
-            System.out.println("Sea bienvenido al conversor de monedas:");
+            System.out.println("******************************************");
+            System.out.println("Sea bienvenido(a) al conversor de monedas:");
             System.out.println("\n[1] - Dolar =>> Peso argentino");
             System.out.println("[2] - Peso argentino =>> Dolar");
             System.out.println("[3] - Dolar =>>> Real brasilero");
@@ -15,8 +15,8 @@ public class Principal {
             System.out.println("[5] - Dolar =>> Nuevo sol");
             System.out.println("[6] - Nuevo sol =>> Dolar");
             System.out.println("[7] - Salir");
-            System.out.println("\nSeleccione una opción valida: ");
-            System.out.println("***************************************");
+            System.out.println("\nSeleccione una opción válida: ");
+            System.out.println("*****************************************");
             opcion = scanner.nextInt();
 
             switch (opcion) {
@@ -42,7 +42,7 @@ public class Principal {
                     System.out.println("Gracias por utilizar el conversor de monedas.");
                     break;
                 default:
-                    System.out.println("Opción no válida. Intente nuevamente.");
+                    System.out.println("Opción no válida... Intente nuevamente.");
             }
         } while (opcion != 7);
         scanner.close();
@@ -61,7 +61,7 @@ public class Principal {
         double cantidad = scanner.nextDouble();
 
         double resultado = cantidad * tasa;
-        System.out.println("La cantidad de " + cantidad + " " + monedaOrigen + " es equivalente a " + resultado + " " + monedaDestino);
+        System.out.println("La cantidad de " + cantidad + " " + monedaOrigen + " equivale a " + resultado + " " + monedaDestino);
 
         // Guardar en el historial
         GeneradorArchivo.guardarEnHistorial(monedaOrigen, monedaDestino, cantidad, resultado);
